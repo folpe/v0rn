@@ -118,8 +118,22 @@ export const CinematicProcess = () => {
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                    className="mt-16 hidden h-[2px] w-32 origin-left bg-gradient-to-r from-[#FF6E2E]/50 to-[#FF6E2E]/50 md:block"
-                  ></motion.div>
+                    className="relative mt-16 hidden h-[2px] w-32 overflow-hidden bg-[#FF6E2E]/20 md:block"
+                  >
+                    {/* K2000-style moving light */}
+                    <motion.div
+                      animate={{
+                        x: ["-100%", "200%"],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: index * 0.3,
+                      }}
+                      className="absolute inset-y-0 w-[50%] bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
+                    ></motion.div>
+                  </motion.div>
                 )}</>
 
             )
