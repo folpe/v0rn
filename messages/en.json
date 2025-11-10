@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "badge": "An internal forge by",
+    "title": "FORGED BY",
+    "tagline": "Where vision meets iteration."
+  },
+  "philosophy": {
+    "label": "THE PHILOSOPHY",
+    "text": {
+      "part1": "We are the invisible hand behind innovation.",
+      "highlight1": " Every line of code",
+      "part2": ", every pixel, every iteration—a deliberate act of",
+      "highlight2": " mastery",
+      "part3": ". We forge tools that don't just work—they",
+      "highlight3": " transcend expectations",
+      "part4": ". In the crucible of v0rn, ideas are tested, refined, and reborn.",
+      "part5": " This is where version zero becomes version one."
+    }
+  },
+  "process": {
+    "label": "THE PROCESS",
+    "title": "Three Pillars",
+    "pillars": {
+      "prequalify": {
+        "title": "Prequalify",
+        "description": "Every vision undergoes scrutiny. We dissect, validate, and refine until clarity emerges."
+      },
+      "forge": {
+        "title": "Forge",
+        "description": "In the heat of creation, precision meets passion. We craft with intention, not haste."
+      },
+      "scale": {
+        "title": "Scale",
+        "description": "From concept to completion. We iterate relentlessly until perfection is achieved."
+      }
+    }
+  },
+  "foundry": {
+    "label": "THE FOUNDRY",
+    "title": "Forged Internally",
+    "description": "A glimpse into the arsenal. Each project, a testament to craft and precision.",
+    "badge": "⚡ INTERNAL USE ONLY",
+    "categories": {
+      "internalTool": "Internal Tool",
+      "apiGateway": "API Gateway",
+      "buildSystem": "Build System",
+      "dataPipeline": "Data Pipeline",
+      "analyticsEngine": "Analytics Engine",
+      "infrastructure": "Infrastructure"
+    }
+  },
+  "ethos": {
+    "label": "THE ETHOS",
+    "quote": {
+      "part1": "We craft what others imagine.",
+      "part2": "Each build is a lesson in precision."
+    },
+    "manifesto": "v0rn Manifesto"
+  },
+  "ecosystem": {
+    "label": "THE ECOSYSTEM",
+    "title": "Connected by Design",
+    "description": "v0rn exists within a constellation of innovation",
+    "entities": {
+      "voidCorp": "The parent entity. Strategic vision and enterprise infrastructure.",
+      "volpio": "Sister brand. Consumer-facing innovation and digital experiences."
+    },
+    "connection": "Active Connection",
+    "unified": "Unified by"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "forged": "Forged in France 🇫🇷"
+  }
+}
