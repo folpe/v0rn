@@ -47,9 +47,9 @@ export const CinematicFooter = () => {
             className="space-y-2 text-center"
           >
             <p className="text-sm text-[#BFC3C8]/40">
-              © 2025 <span className="text-[#BFC3C8]/60">Void Corp</span>. All rights reserved.
+              © 2025 <span className="text-[#BFC3C8]/60">Void Corp</span>. Tous droits réservés.
             </p>
-            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">Forged in France 🇫🇷</p>
+            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">Forgé en France 🇫🇷</p>
           </motion.div>
 
           {/* Decorative Elements */}

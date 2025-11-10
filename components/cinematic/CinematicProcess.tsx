@@ -7,18 +7,18 @@ export const CinematicProcess = () => {
   const pillars = [
     {
       icon: Search,
-      title: "Prequalify",
-      description: "Every vision undergoes scrutiny. We dissect, validate, and refine until clarity emerges.",
+      title: "Préqualifier",
+      description: "Chaque vision est scrutée. Nous disséquons, validons, et affinons jusqu'à l'émergence de la clarté.",
     },
     {
       icon: Flame,
-      title: "Forge",
-      description: "In the heat of creation, precision meets passion. We craft with intention, not haste.",
+      title: "Forger",
+      description: "Dans l'ardeur de la création, précision et passion fusionnent. Nous créons avec intention, sans hâte.",
     },
     {
       icon: Rocket,
-      title: "Scale",
-      description: "From concept to completion. We iterate relentlessly until perfection is achieved.",
+      title: "Déployer",
+      description: "Du concept à l'achèvement. Nous itérons sans relâche jusqu'à atteindre la perfection.",
     },
   ]
 
@@ -40,9 +40,9 @@ export const CinematicProcess = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">THE PROCESS</span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">LE PROCESSUS</span>
           </div>
-          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">Three Pillars</h2>
+          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">Trois Piliers</h2>
         </motion.div>
 
         {/* Pillars Grid */}
