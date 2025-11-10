@@ -109,14 +109,14 @@ export const CinematicProcess = () => {
                   </div>
                 </motion.div>
 
-                {/* Vertical Connecting Line - Only between pillars, hidden on mobile */}
+                {/* Horizontal Connecting Line - Only between pillars, hidden on mobile */}
                 {index < pillars.length - 1 && (
                   <motion.div
-                    initial={{ scaleY: 0 }}
-                    whileInView={{ scaleY: 1 }}
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                    className="mx-12 hidden h-[200px] w-[1px] origin-top bg-gradient-to-b from-transparent via-[#FF6E2E]/30 to-transparent md:block"
+                    className="mx-8 hidden h-[2px] w-24 origin-left bg-gradient-to-r from-[#FF6E2E]/40 via-[#FF6E2E]/30 to-[#FF6E2E]/40 md:block"
                   ></motion.div>
                 )}
               </div>
