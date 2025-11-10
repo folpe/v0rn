@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "badge": "Une forge interne de",
+    "title": "FORGÉ PAR",
+    "tagline": "Quand la vision forge l'itération."
+  },
+  "philosophy": {
+    "label": "LA PHILOSOPHIE",
+    "text": {
+      "part1": "Nous sommes la main invisible de l'innovation.",
+      "highlight1": " Chaque ligne de code",
+      "part2": ", chaque pixel, chaque itération—un acte délibéré de",
+      "highlight2": " maîtrise",
+      "part3": ". Nous forgeons des outils qui ne se contentent pas de fonctionner—ils",
+      "highlight3": " dépassent les attentes",
+      "part4": ". Dans le creuset de v0rn, les idées sont testées, affinées, puis renaissent.",
+      "part5": " Ici, la version zéro devient version un."
+    }
+  },
+  "process": {
+    "label": "LE PROCESSUS",
+    "title": "Trois Piliers",
+    "pillars": {
+      "prequalify": {
+        "title": "Préqualifier",
+        "description": "Chaque vision est scrutée. Nous disséquons, validons, et affinons jusqu'à l'émergence de la clarté."
+      },
+      "forge": {
+        "title": "Forger",
+        "description": "Dans l'ardeur de la création, précision et passion fusionnent. Nous créons avec intention, sans hâte."
+      },
+      "scale": {
+        "title": "Déployer",
+        "description": "Du concept à l'achèvement. Nous itérons sans relâche jusqu'à atteindre la perfection."
+      }
+    }
+  },
+  "foundry": {
+    "label": "LA FORGE",
+    "title": "Forgé en Interne",
+    "description": "Un aperçu de l'arsenal. Chaque projet, un témoignage de savoir-faire et de précision.",
+    "badge": "⚡ USAGE INTERNE UNIQUEMENT",
+    "categories": {
+      "internalTool": "Outil Interne",
+      "apiGateway": "Passerelle API",
+      "buildSystem": "Système de Build",
+      "dataPipeline": "Pipeline de Données",
+      "analyticsEngine": "Moteur d'Analyse",
+      "infrastructure": "Infrastructure"
+    }
+  },
+  "ethos": {
+    "label": "L'ÉTHIQUE",
+    "quote": {
+      "part1": "Nous créons ce que d'autres imaginent.",
+      "part2": "Chaque création est une leçon de précision."
+    },
+    "manifesto": "Manifeste v0rn"
+  },
+  "ecosystem": {
+    "label": "L'ÉCOSYSTÈME",
+    "title": "Connecté par Design",
+    "description": "v0rn s'inscrit dans une constellation d'innovation",
+    "entities": {
+      "voidCorp": "L'entité mère. Vision stratégique et infrastructure d'entreprise.",
+      "volpio": "Marque sœur. Innovation grand public et expériences numériques."
+    },
+    "connection": "Connexion Active",
+    "unified": "Unifié par"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "forged": "Forgé en France 🇫🇷"
+  }
+}

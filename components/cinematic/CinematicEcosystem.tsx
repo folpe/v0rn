@@ -2,21 +2,20 @@
 
 import { ArrowUpRight } from "lucide-react"
 import { motion } from "motion/react"
-import { useLanguage } from "contexts/LanguageContext"
-import { translations } from "lib/translations"
+import { useTranslations } from "next-intl"
 
 export const CinematicEcosystem = () => {
-  const { language } = useLanguage()
+  const t = useTranslations("ecosystem")
 
   const entities = [
     {
       name: "Void Corp",
-      description: translations.ecosystem.entities.voidCorp[language],
+      description: t("entities.voidCorp"),
       color: "#297FFF",
     },
     {
       name: "Volpio",
-      description: translations.ecosystem.entities.volpio[language],
+      description: t("entities.volpio"),
       color: "#FF6E2E",
     },
   ]
@@ -59,16 +58,10 @@ export const CinematicEcosystem = () => {
           className="mb-24 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {translations.ecosystem.label[language]}
-            </span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
           </div>
-          <h2 className="mb-6 text-5xl font-bold tracking-tight text-[#BFC3C8] md:text-6xl">
-            {translations.ecosystem.title[language]}
-          </h2>
-          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">
-            {translations.ecosystem.description[language]}
-          </p>
+          <h2 className="mb-6 text-5xl font-bold tracking-tight text-[#BFC3C8] md:text-6xl">{t("title")}</h2>
+          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">{t("description")}</p>
         </motion.div>
 
         {/* Entities Grid */}
@@ -132,9 +125,7 @@ export const CinematicEcosystem = () => {
                       className="h-2 w-2 rounded-full"
                       style={{ backgroundColor: entity.color }}
                     ></motion.div>
-                    <span className="text-xs tracking-wider text-[#BFC3C8]/40 uppercase">
-                      {translations.ecosystem.connection[language]}
-                    </span>
+                    <span className="text-xs tracking-wider text-[#BFC3C8]/40 uppercase">{t("connection")}</span>
                   </div>
                 </div>
 
@@ -160,7 +151,7 @@ export const CinematicEcosystem = () => {
         >
           <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(191,195,200,0.2)] bg-[#1A1A1D] px-6 py-3">
             <div className="h-2 w-2 rounded-full bg-[#297FFF]"></div>
-            <span className="text-sm text-[#BFC3C8]/60">{translations.ecosystem.unified[language]}</span>
+            <span className="text-sm text-[#BFC3C8]/60">{t("unified")}</span>
             <span className="text-sm font-bold text-[#FF6E2E]">v0rn</span>
             <div className="h-2 w-2 rounded-full bg-[#FF6E2E]"></div>
           </div>

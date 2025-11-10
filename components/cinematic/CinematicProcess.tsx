@@ -3,27 +3,26 @@
 import { Flame, Rocket, Search } from "lucide-react"
 
 import { motion } from "motion/react"
-import { translations } from "lib/translations"
-import { useLanguage } from "contexts/LanguageContext"
+import { useTranslations } from "next-intl"
 
 export const CinematicProcess = () => {
-  const { language } = useLanguage()
+  const t = useTranslations("process")
 
   const pillars = [
     {
       icon: Search,
-      title: translations.process.pillars.prequalify.title[language],
-      description: translations.process.pillars.prequalify.description[language],
+      title: t("pillars.prequalify.title"),
+      description: t("pillars.prequalify.description"),
     },
     {
       icon: Flame,
-      title: translations.process.pillars.forge.title[language],
-      description: translations.process.pillars.forge.description[language],
+      title: t("pillars.forge.title"),
+      description: t("pillars.forge.description"),
     },
     {
       icon: Rocket,
-      title: translations.process.pillars.scale.title[language],
-      description: translations.process.pillars.scale.description[language],
+      title: t("pillars.scale.title"),
+      description: t("pillars.scale.description"),
     },
   ]
 
@@ -45,13 +44,9 @@ export const CinematicProcess = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {translations.process.label[language]}
-            </span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
           </div>
-          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
-            {translations.process.title[language]}
-          </h2>
+          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">{t("title")}</h2>
         </motion.div>
 
         {/* Pillars Container */}
