@@ -54,13 +54,14 @@ export const CinematicProcess = () => {
         </motion.div>
 
         {/* Pillars Container */}
-        <div className="flex flex-col items-center justify-center gap-20 md:flex-row md:gap-0">
+        <div className="flex flex-col items-center justify-center gap-20 md:flex-row md:items-start md:gap-0">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon
             return (
-              <div key={index} className="flex items-center">
+              <>
                 {/* Pillar */}
                 <motion.div
+                  key={`pillar-${index}`}
                   initial={{ opacity: 0, y: 60 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -112,14 +113,15 @@ export const CinematicProcess = () => {
                 {/* Horizontal Connecting Line - Only between pillars, hidden on mobile */}
                 {index < pillars.length - 1 && (
                   <motion.div
+                    key={`line-${index}`}
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                    className="mx-8 hidden h-[2px] w-24 origin-left bg-gradient-to-r from-[#FF6E2E]/40 via-[#FF6E2E]/30 to-[#FF6E2E]/40 md:block"
+                    className="mt-16 hidden h-[2px] w-32 origin-left bg-gradient-to-r from-[#FF6E2E]/50 to-[#FF6E2E]/50 md:block"
                   ></motion.div>
-                )}
-              </div>
+                )}</>
+
             )
           })}
         </div>
