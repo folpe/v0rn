@@ -21,9 +21,7 @@ export const CinematicPhilosophy = () => {
         >
           {/* Section Label */}
           <div className="mb-12 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {t("label")}
-            </span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
           </div>
 
           {/* Manifesto */}

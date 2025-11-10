@@ -85,7 +85,7 @@ export function LanguageToggle() {
           disabled={isPending}
         >
           <Globe className="h-4 w-4 text-orange-400" strokeWidth={2} />
-          <span className="text-sm font-medium uppercase text-orange-300/90">{locale}</span>
+          <span className="text-sm font-medium text-orange-300/90 uppercase">{locale}</span>
         </motion.button>
 
         <AnimatePresence>
@@ -94,7 +94,7 @@ export function LanguageToggle() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 top-full mt-2 min-w-[100px] overflow-hidden rounded-lg border border-orange-500/30 bg-gray-900/95 backdrop-blur-md"
+              className="absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-orange-500/30 bg-gray-900/95 backdrop-blur-md"
             >
               <button
                 onClick={() => handleLanguageChange("en")}

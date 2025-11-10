@@ -73,16 +73,10 @@ export const CinematicFoundry = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {t("label")}
-            </span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
           </div>
-          <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
-            {t("title")}
-          </h2>
-          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">
-            {t("description")}
-          </p>
+          <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">{t("title")}</h2>
+          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">{t("description")}</p>
         </motion.div>
 
         {/* Projects Grid */}
@@ -137,9 +131,7 @@ export const CinematicFoundry = () => {
 
                   {/* Internal Badge */}
                   <div className="mt-4 border-t border-[rgba(191,195,200,0.1)] pt-4">
-                    <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">
-                      {t("badge")}
-                    </span>
+                    <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">{t("badge")}</span>
                   </div>
                 </div>
               </div>

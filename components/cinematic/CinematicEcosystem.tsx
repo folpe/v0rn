@@ -58,16 +58,10 @@ export const CinematicEcosystem = () => {
           className="mb-24 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {t("label")}
-            </span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
           </div>
-          <h2 className="mb-6 text-5xl font-bold tracking-tight text-[#BFC3C8] md:text-6xl">
-            {t("title")}
-          </h2>
-          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">
-            {t("description")}
-          </p>
+          <h2 className="mb-6 text-5xl font-bold tracking-tight text-[#BFC3C8] md:text-6xl">{t("title")}</h2>
+          <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">{t("description")}</p>
         </motion.div>
 
         {/* Entities Grid */}
@@ -131,9 +125,7 @@ export const CinematicEcosystem = () => {
                       className="h-2 w-2 rounded-full"
                       style={{ backgroundColor: entity.color }}
                     ></motion.div>
-                    <span className="text-xs tracking-wider text-[#BFC3C8]/40 uppercase">
-                      {t("connection")}
-                    </span>
+                    <span className="text-xs tracking-wider text-[#BFC3C8]/40 uppercase">{t("connection")}</span>
                   </div>
                 </div>
 
