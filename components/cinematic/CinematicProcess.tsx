@@ -68,7 +68,7 @@ export const CinematicProcess = () => {
               >
                 {/* Connecting Line */}
                 {index < pillars.length - 1 && (
-                  <div className="absolute top-24 left-[60%] hidden h-[1px] w-full md:block">
+                  <div className="absolute top-16 left-[60%] hidden h-[1px] w-full md:block">
                     <motion.div
                       initial={{ scaleX: 0 }}
                       whileInView={{ scaleX: 1 }}
