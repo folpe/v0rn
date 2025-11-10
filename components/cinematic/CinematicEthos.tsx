@@ -1,11 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useLanguage } from "contexts/LanguageContext"
-import { translations } from "lib/translations"
+import { useTranslations } from "next-intl"
 
 export const CinematicEthos = () => {
-  const { language } = useLanguage()
+  const t = useTranslations("ethos")
 
   return (
     <section className="relative overflow-hidden px-6 py-40">
@@ -40,7 +39,7 @@ export const CinematicEthos = () => {
           {/* Section Label */}
           <div className="mb-16 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
             <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {translations.ethos.label[language]}
+              {t("label")}
             </span>
           </div>
 
@@ -73,14 +72,14 @@ export const CinematicEthos = () => {
             className="mx-auto max-w-[800px]"
           >
             <blockquote className="mb-8 text-3xl leading-relaxed font-light text-[#BFC3C8] md:text-4xl">
-              "{translations.ethos.quote.part1[language]}
+              "{t("quote.part1")}
               <br />
-              <span className="font-normal text-[#FF6E2E]">{translations.ethos.quote.part2[language]}</span>"
+              <span className="font-normal text-[#FF6E2E]">{t("quote.part2")}</span>"
             </blockquote>
 
             <div className="flex items-center justify-center gap-3 text-[#BFC3C8]/40">
               <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#BFC3C8]/40"></div>
-              <span className="text-sm tracking-widest uppercase">{translations.ethos.manifesto[language]}</span>
+              <span className="text-sm tracking-widest uppercase">{t("manifesto")}</span>
               <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#BFC3C8]/40"></div>
             </div>
           </motion.div>

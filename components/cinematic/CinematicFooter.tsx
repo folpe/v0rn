@@ -1,11 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useLanguage } from "contexts/LanguageContext"
-import { translations } from "lib/translations"
+import { useTranslations } from "next-intl"
 
 export const CinematicFooter = () => {
-  const { language } = useLanguage()
+  const t = useTranslations("footer")
 
   return (
     <footer className="relative overflow-hidden border-t border-[#2C2F33] px-6 py-16">
@@ -51,9 +50,9 @@ export const CinematicFooter = () => {
             className="space-y-2 text-center"
           >
             <p className="text-sm text-[#BFC3C8]/40">
-              © 2025 <span className="text-[#BFC3C8]/60">Void Corp</span>. {translations.footer.copyright[language]}
+              © 2025 <span className="text-[#BFC3C8]/60">Void Corp</span>. {t("copyright")}
             </p>
-            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">{translations.footer.forged[language]}</p>
+            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">{t("forged")}</p>
           </motion.div>
 
           {/* Decorative Elements */}

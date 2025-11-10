@@ -1,12 +1,10 @@
 "use client"
 
 import { motion } from "motion/react"
-import { useLanguage } from "contexts/LanguageContext"
-import { translations } from "lib/translations"
+import { useTranslations } from "next-intl"
 
 export const CinematicPhilosophy = () => {
-  const { language } = useLanguage()
-  const text = translations.philosophy.text[language]
+  const t = useTranslations("philosophy")
 
   return (
     <section className="relative overflow-hidden px-6 py-40">
@@ -24,7 +22,7 @@ export const CinematicPhilosophy = () => {
           {/* Section Label */}
           <div className="mb-12 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
             <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {translations.philosophy.label[language]}
+              {t("label")}
             </span>
           </div>
 
@@ -41,14 +39,14 @@ export const CinematicPhilosophy = () => {
             </motion.div>
 
             <p className="text-2xl leading-relaxed font-light tracking-wide text-[#BFC3C8] md:text-3xl">
-              {text.part1}
-              <span className="font-normal text-[#FF6E2E]">{text.highlight1}</span>
-              {text.part2}
-              <span className="font-normal text-[#FF6E2E]">{text.highlight2}</span>
-              {text.part3}
-              <span className="font-normal text-[#FF6E2E]">{text.highlight3}</span>
-              {text.part4}
-              <span className="text-[#BFC3C8]/60">{text.part5}</span>
+              {t("text.part1")}
+              <span className="font-normal text-[#FF6E2E]">{t("text.highlight1")}</span>
+              {t("text.part2")}
+              <span className="font-normal text-[#FF6E2E]">{t("text.highlight2")}</span>
+              {t("text.part3")}
+              <span className="font-normal text-[#FF6E2E]">{t("text.highlight3")}</span>
+              {t("text.part4")}
+              <span className="text-[#BFC3C8]/60">{t("text.part5")}</span>
             </p>
           </div>
 

@@ -2,46 +2,45 @@
 
 import { motion } from "motion/react"
 import Image from "next/image"
-import { useLanguage } from "contexts/LanguageContext"
-import { translations } from "lib/translations"
+import { useTranslations } from "next-intl"
 
 export const CinematicFoundry = () => {
-  const { language } = useLanguage()
+  const t = useTranslations("foundry")
 
   const projects = [
     {
       title: "Project Atlas",
-      category: translations.foundry.categories.internalTool[language],
+      category: t("categories.internalTool"),
       image:
         "https://images.unsplash.com/photo-1739343338040-2dae68f6bdf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrfGVufDF8fHx8MTc1OTk1NDkzOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Nexus",
-      category: translations.foundry.categories.apiGateway[language],
+      category: t("categories.apiGateway"),
       image:
         "https://images.unsplash.com/photo-1558655146-d09347e92766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwaW50ZXJmYWNlJTIwZGVzaWdufGVufDF8fHx8MTc1OTk1NDkzOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Forge",
-      category: translations.foundry.categories.buildSystem[language],
+      category: t("categories.buildSystem"),
       image:
         "https://images.unsplash.com/photo-1689250912749-c5c1e2e8d4f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWV0YWwlMjB0ZXh0dXJlfGVufDF8fHx8MTc1OTk1NDk0MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Cipher",
-      category: translations.foundry.categories.dataPipeline[language],
+      category: t("categories.dataPipeline"),
       image:
         "https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwc2NyZWVuJTIwZGFya3xlbnwxfHx8fDE3NTk5NTQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Quantum",
-      category: translations.foundry.categories.analyticsEngine[language],
+      category: t("categories.analyticsEngine"),
       image:
         "https://images.unsplash.com/photo-1743963256372-345f0c6dc098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBwYXR0ZXJuJTIwZGFya3xlbnwxfHx8fDE3NTk4OTc3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Onyx",
-      category: translations.foundry.categories.infrastructure[language],
+      category: t("categories.infrastructure"),
       image:
         "https://images.unsplash.com/photo-1640552421163-5a8e34827550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmQlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc1OTg2MzAzNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
@@ -75,14 +74,14 @@ export const CinematicFoundry = () => {
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
             <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
-              {translations.foundry.label[language]}
+              {t("label")}
             </span>
           </div>
           <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
-            {translations.foundry.title[language]}
+            {t("title")}
           </h2>
           <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">
-            {translations.foundry.description[language]}
+            {t("description")}
           </p>
         </motion.div>
 
@@ -139,7 +138,7 @@ export const CinematicFoundry = () => {
                   {/* Internal Badge */}
                   <div className="mt-4 border-t border-[rgba(191,195,200,0.1)] pt-4">
                     <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">
-                      {translations.foundry.badge[language]}
+                      {t("badge")}
                     </span>
                   </div>
                 </div>
