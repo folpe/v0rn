@@ -7,6 +7,7 @@ import { CinematicFoundry } from "components/cinematic/CinematicFoundry"
 import { CinematicHero } from "components/cinematic/CinematicHero"
 import { CinematicPhilosophy } from "components/cinematic/CinematicPhilosophy"
 import { CinematicProcess } from "components/cinematic/CinematicProcess"
+import { LanguageToggle } from "components/LanguageToggle"
 
 export const metadata: Metadata = {
   title: "V0rn",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Web() {
   return (
     <div className="min-h-screen bg-[#0E0E10]">
+      <LanguageToggle />
       <CinematicHero />
       <CinematicPhilosophy />
       <CinematicProcess />

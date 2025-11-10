@@ -1,8 +1,12 @@
 "use client"
 
 import { motion } from "motion/react"
+import { useLanguage } from "contexts/LanguageContext"
+import { translations } from "lib/translations"
 
 export const CinematicHero = () => {
+  const { language } = useLanguage()
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-32">
       {/* Animated Background Mesh */}
@@ -52,7 +56,7 @@ export const CinematicHero = () => {
           className="mb-12 inline-flex items-center gap-2 rounded-full border border-[rgba(191,195,200,0.2)] bg-[#1A1A1D] px-6 py-3 backdrop-blur-sm"
         >
           <div className="h-2 w-2 animate-pulse rounded-full bg-[#FF6E2E]"></div>
-          <span className="text-sm tracking-wide text-[#BFC3C8]/70">Une forge interne de</span>
+          <span className="text-sm tracking-wide text-[#BFC3C8]/70">{translations.hero.badge[language]}</span>
           <span className="text-sm font-semibold text-[#BFC3C8]">Void Corp</span>
         </motion.div>
 
@@ -64,7 +68,7 @@ export const CinematicHero = () => {
           className="mb-8"
         >
           <h1 className="mb-6 text-7xl font-bold tracking-tighter md:text-8xl lg:text-9xl">
-            <span className="text-[#BFC3C8]">FORGÉ PAR</span>
+            <span className="text-[#BFC3C8]">{translations.hero.title[language]}</span>
             <br />
             <span className="relative inline-block">
               <span className="text-[#BFC3C8]">V</span>
@@ -109,7 +113,7 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16 text-2xl tracking-wide text-[#BFC3C8]/60 md:text-3xl"
         >
-          Quand la vision forge l'itération.
+          {translations.hero.tagline[language]}
         </motion.p>
 
         {/* Decorative Line */}

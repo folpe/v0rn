@@ -2,23 +2,27 @@
 
 import { Flame, Rocket, Search } from "lucide-react"
 import { motion } from "motion/react"
+import { useLanguage } from "contexts/LanguageContext"
+import { translations } from "lib/translations"
 
 export const CinematicProcess = () => {
+  const { language } = useLanguage()
+
   const pillars = [
     {
       icon: Search,
-      title: "Préqualifier",
-      description: "Chaque vision est scrutée. Nous disséquons, validons, et affinons jusqu'à l'émergence de la clarté.",
+      title: translations.process.pillars.prequalify.title[language],
+      description: translations.process.pillars.prequalify.description[language],
     },
     {
       icon: Flame,
-      title: "Forger",
-      description: "Dans l'ardeur de la création, précision et passion fusionnent. Nous créons avec intention, sans hâte.",
+      title: translations.process.pillars.forge.title[language],
+      description: translations.process.pillars.forge.description[language],
     },
     {
       icon: Rocket,
-      title: "Déployer",
-      description: "Du concept à l'achèvement. Nous itérons sans relâche jusqu'à atteindre la perfection.",
+      title: translations.process.pillars.scale.title[language],
+      description: translations.process.pillars.scale.description[language],
     },
   ]
 
@@ -40,9 +44,13 @@ export const CinematicProcess = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">LE PROCESSUS</span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
+              {translations.process.label[language]}
+            </span>
           </div>
-          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">Trois Piliers</h2>
+          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
+            {translations.process.title[language]}
+          </h2>
         </motion.div>
 
         {/* Pillars Grid */}

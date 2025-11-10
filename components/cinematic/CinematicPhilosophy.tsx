@@ -1,8 +1,13 @@
 "use client"
 
 import { motion } from "motion/react"
+import { useLanguage } from "contexts/LanguageContext"
+import { translations } from "lib/translations"
 
 export const CinematicPhilosophy = () => {
+  const { language } = useLanguage()
+  const text = translations.philosophy.text[language]
+
   return (
     <section className="relative overflow-hidden px-6 py-40">
       {/* Background Effect */}
@@ -18,7 +23,9 @@ export const CinematicPhilosophy = () => {
         >
           {/* Section Label */}
           <div className="mb-12 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">LA PHILOSOPHIE</span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
+              {translations.philosophy.label[language]}
+            </span>
           </div>
 
           {/* Manifesto */}
@@ -34,13 +41,14 @@ export const CinematicPhilosophy = () => {
             </motion.div>
 
             <p className="text-2xl leading-relaxed font-light tracking-wide text-[#BFC3C8] md:text-3xl">
-              Nous sommes la main invisible de l'innovation.
-              <span className="font-normal text-[#FF6E2E]"> Chaque ligne de code</span>, chaque pixel, chaque itération—un
-              acte délibéré de
-              <span className="font-normal text-[#FF6E2E]"> maîtrise</span>. Nous forgeons des outils qui ne se contentent pas de fonctionner—ils
-              <span className="font-normal text-[#FF6E2E]"> dépassent les attentes</span>. Dans le creuset de v0rn,
-              les idées sont testées, affinées, puis renaissent.
-              <span className="text-[#BFC3C8]/60"> Ici, la version zéro devient version un.</span>
+              {text.part1}
+              <span className="font-normal text-[#FF6E2E]">{text.highlight1}</span>
+              {text.part2}
+              <span className="font-normal text-[#FF6E2E]">{text.highlight2}</span>
+              {text.part3}
+              <span className="font-normal text-[#FF6E2E]">{text.highlight3}</span>
+              {text.part4}
+              <span className="text-[#BFC3C8]/60">{text.part5}</span>
             </p>
           </div>
 
