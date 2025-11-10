@@ -2,23 +2,27 @@
 
 import { Flame, Rocket, Search } from "lucide-react"
 import { motion } from "motion/react"
+import { useLanguage } from "contexts/LanguageContext"
+import { translations } from "lib/translations"
 
 export const CinematicProcess = () => {
+  const { language } = useLanguage()
+
   const pillars = [
     {
       icon: Search,
-      title: "Prequalify",
-      description: "Every vision undergoes scrutiny. We dissect, validate, and refine until clarity emerges.",
+      title: translations.process.pillars.prequalify.title[language],
+      description: translations.process.pillars.prequalify.description[language],
     },
     {
       icon: Flame,
-      title: "Forge",
-      description: "In the heat of creation, precision meets passion. We craft with intention, not haste.",
+      title: translations.process.pillars.forge.title[language],
+      description: translations.process.pillars.forge.description[language],
     },
     {
       icon: Rocket,
-      title: "Scale",
-      description: "From concept to completion. We iterate relentlessly until perfection is achieved.",
+      title: translations.process.pillars.scale.title[language],
+      description: translations.process.pillars.scale.description[language],
     },
   ]
 
@@ -40,9 +44,13 @@ export const CinematicProcess = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">THE PROCESS</span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
+              {translations.process.label[language]}
+            </span>
           </div>
-          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">Three Pillars</h2>
+          <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
+            {translations.process.title[language]}
+          </h2>
         </motion.div>
 
         {/* Pillars Grid */}

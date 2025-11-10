@@ -2,42 +2,46 @@
 
 import { motion } from "motion/react"
 import Image from "next/image"
+import { useLanguage } from "contexts/LanguageContext"
+import { translations } from "lib/translations"
 
 export const CinematicFoundry = () => {
+  const { language } = useLanguage()
+
   const projects = [
     {
       title: "Project Atlas",
-      category: "Internal Tool",
+      category: translations.foundry.categories.internalTool[language],
       image:
         "https://images.unsplash.com/photo-1739343338040-2dae68f6bdf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBkYXJrfGVufDF8fHx8MTc1OTk1NDkzOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Nexus",
-      category: "API Gateway",
+      category: translations.foundry.categories.apiGateway[language],
       image:
         "https://images.unsplash.com/photo-1558655146-d09347e92766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwaW50ZXJmYWNlJTIwZGVzaWdufGVufDF8fHx8MTc1OTk1NDkzOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Forge",
-      category: "Build System",
+      category: translations.foundry.categories.buildSystem[language],
       image:
         "https://images.unsplash.com/photo-1689250912749-c5c1e2e8d4f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWV0YWwlMjB0ZXh0dXJlfGVufDF8fHx8MTc1OTk1NDk0MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Cipher",
-      category: "Data Pipeline",
+      category: translations.foundry.categories.dataPipeline[language],
       image:
         "https://images.unsplash.com/photo-1733412505442-36cfa59a4240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwc2NyZWVuJTIwZGFya3xlbnwxfHx8fDE3NTk5NTQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Quantum",
-      category: "Analytics Engine",
+      category: translations.foundry.categories.analyticsEngine[language],
       image:
         "https://images.unsplash.com/photo-1743963256372-345f0c6dc098?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBwYXR0ZXJuJTIwZGFya3xlbnwxfHx8fDE3NTk4OTc3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
     {
       title: "Project Onyx",
-      category: "Infrastructure",
+      category: translations.foundry.categories.infrastructure[language],
       image:
         "https://images.unsplash.com/photo-1640552421163-5a8e34827550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmQlMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc1OTg2MzAzNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     },
@@ -70,11 +74,15 @@ export const CinematicFoundry = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">THE FOUNDRY</span>
+            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">
+              {translations.foundry.label[language]}
+            </span>
           </div>
-          <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">Forged Internally</h2>
+          <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">
+            {translations.foundry.title[language]}
+          </h2>
           <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">
-            A glimpse into the arsenal. Each project, a testament to craft and precision.
+            {translations.foundry.description[language]}
           </p>
         </motion.div>
 
@@ -130,7 +138,9 @@ export const CinematicFoundry = () => {
 
                   {/* Internal Badge */}
                   <div className="mt-4 border-t border-[rgba(191,195,200,0.1)] pt-4">
-                    <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">⚡ INTERNAL USE ONLY</span>
+                    <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">
+                      {translations.foundry.badge[language]}
+                    </span>
                   </div>
                 </div>
               </div>
