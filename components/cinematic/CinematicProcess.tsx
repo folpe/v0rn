@@ -1,9 +1,10 @@
 "use client"
 
 import { Flame, Rocket, Search } from "lucide-react"
+
 import { motion } from "motion/react"
-import { useLanguage } from "contexts/LanguageContext"
 import { translations } from "lib/translations"
+import { useLanguage } from "contexts/LanguageContext"
 
 export const CinematicProcess = () => {
   const { language } = useLanguage()
@@ -53,8 +54,30 @@ export const CinematicProcess = () => {
           </h2>
         </motion.div>
 
-        {/* Pillars Grid */}
-        <div className="grid gap-16 md:grid-cols-3">
+        {/* Pillars Container */}
+        <div className="relative flex flex-col items-center justify-between gap-20 md:flex-row md:items-start md:gap-0">
+          {/* Continuous Connecting Line - Hidden on mobile */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            className="absolute top-16 right-32 left-32 hidden h-[2px] overflow-hidden bg-[#FF6E2E]/20 md:block"
+          >
+            {/* K2000-style moving light */}
+            <motion.div
+              animate={{
+                x: ["-100%", "250%"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="absolute inset-y-0 w-[30%] bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
+            ></motion.div>
+          </motion.div>
+
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon
             return (
@@ -64,61 +87,47 @@ export const CinematicProcess = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="group relative"
+                className="group relative z-10 flex flex-col items-center"
               >
-                {/* Connecting Line */}
-                {index < pillars.length - 1 && (
-                  <div className="absolute top-24 left-[60%] hidden h-[1px] w-full md:block">
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                      className="h-full w-full origin-left bg-gradient-to-r from-[#FF6E2E]/30 to-transparent"
-                    ></motion.div>
+                {/* Icon Container */}
+                <div className="relative mb-8 flex h-32 w-32 items-center justify-center">
+                  {/* Outer Ring */}
+                  <motion.div
+                    animate={{
+                      rotate: [0, 360],
+                    }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-0 rounded-full border-2 border-dashed border-[#FF6E2E]/30"
+                  ></motion.div>
+
+                  {/* Inner Glow */}
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      boxShadow: "0 0 40px rgba(255,110,46,0.4)",
+                    }}
+                    className="relative flex h-20 w-20 items-center justify-center rounded-full border border-[#FF6E2E]/30 bg-[#1A1A1D] transition-all duration-300"
+                  >
+                    <Icon className="h-10 w-10 text-[#FF6E2E]" />
+                    <motion.div className="absolute inset-0 rounded-full bg-[#FF6E2E] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20"></motion.div>
+                  </motion.div>
+
+                  {/* Number Badge */}
+                  <div className="absolute -top-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6E2E] to-[#E55A1A] shadow-lg">
+                    <span className="text-sm font-bold text-[#0E0E10]">{String(index + 1).padStart(2, "0")}</span>
                   </div>
-                )}
+                </div>
 
-                <div className="relative">
-                  {/* Icon Container */}
-                  <div className="relative mb-8 inline-flex h-32 w-32 items-center justify-center">
-                    {/* Outer Ring */}
-                    <motion.div
-                      animate={{
-                        rotate: [0, 360],
-                      }}
-                      transition={{
-                        duration: 20,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                      className="absolute inset-0 rounded-full border-2 border-dashed border-[#FF6E2E]/30"
-                    ></motion.div>
-
-                    {/* Inner Glow */}
-                    <motion.div
-                      whileHover={{
-                        scale: 1.1,
-                        boxShadow: "0 0 40px rgba(255,110,46,0.4)",
-                      }}
-                      className="relative flex h-20 w-20 items-center justify-center rounded-full border border-[#FF6E2E]/30 bg-[#1A1A1D] transition-all duration-300"
-                    >
-                      <Icon className="h-10 w-10 text-[#FF6E2E]" />
-                      <motion.div className="absolute inset-0 rounded-full bg-[#FF6E2E] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20"></motion.div>
-                    </motion.div>
-
-                    {/* Number Badge */}
-                    <div className="absolute -top-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#FF6E2E] to-[#E55A1A] shadow-lg">
-                      <span className="text-sm font-bold text-[#0E0E10]">{String(index + 1).padStart(2, "0")}</span>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="mb-4 text-4xl font-bold text-[#BFC3C8] transition-colors duration-300 group-hover:text-[#FF6E2E]">
+                {/* Content */}
+                <div className="max-w-[280px] text-center">
+                  <h3 className="mb-4 text-3xl font-bold text-[#BFC3C8] transition-colors duration-300 group-hover:text-[#FF6E2E] md:text-4xl">
                     {pillar.title}
                   </h3>
-
-                  <p className="text-lg leading-relaxed text-[#BFC3C8]/60">{pillar.description}</p>
+                  <p className="text-base leading-relaxed text-[#BFC3C8]/60 md:text-lg">{pillar.description}</p>
                 </div>
               </motion.div>
             )
